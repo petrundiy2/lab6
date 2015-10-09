@@ -14,4 +14,4 @@ for x in range(len(A)):
             k+=1
     if k==1:
         h=A[x]
-print(eval(h))
+print(eval(h),file=b)
