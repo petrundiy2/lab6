@@ -2,12 +2,13 @@ a=open('input.txt','r')
 b=open('output.txt','w')
 s=a.readline()
 f=a.readline()
+g=f+' '
 A=[]
 h=''
 y=0
-for x in range(len(f)):
-    if f[x]==' ':
-        A.append(eval(f[y:x]))
+for x in range(len(g)):
+    if g[x]==' ':
+        A.append(eval(g[y:x]))
         y=x
 for x in range(len(A)):
     k=0
