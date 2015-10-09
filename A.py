@@ -4,9 +4,12 @@ s=a.readline()
 f=a.readline()
 A=[]
 h=''
-for x in range(int(s)*2):
-    if f[x]!=' ':
-        A.append(f[x])
+y=0
+for x in range(len(f)):
+    if f[x]==' ':
+        A.append(eval(f[y:x]))
+        y=x
+print(A)
 for x in range(len(A)):
     k=0
     for y in range(len(A)):
@@ -14,4 +17,4 @@ for x in range(len(A)):
             k+=1
     if k==1:
         h=A[x]
-print(eval(h),file=b)
+print(h,file=b)
