@@ -1,14 +1,16 @@
-N=int(input())
-A=[]
-for x in range(N):
-    A.append(int(input()))
-k=0
-for x in range(N):
-    if A[x]==5:
-        k-=1
-    if A[x]>5:
-        k+=(A[x]//5)-1
-if k<0:
-    print(0)
-if k>=0:
-    print(k)
+__author__ = 'Petr'
+with open('input.txt', 'r') as inp:
+    with open('output.txt', 'w') as out:
+        N = int(inp.readline())
+        A = list(map(int, inp.readline().split()))
+        nf = 0
+        hf = 0
+        for i in range(N):
+            if A[i] == 5:
+                hf += 1
+            else:
+                hf -= (A[i]-5)//5
+                if hf < 0:
+                    nf -= hf
+                    hf = 0
+        print(nf, file=out)
