@@ -3,12 +3,8 @@ with open('input.txt', 'r') as inp:
     with open('output.txt', 'w') as out:
         N = int(inp.readline())
         A = inp.readline().split()
-        B=[]
-        x=0
-        while x<=N:
-            for y in range(N):
-                if x!=y and A[x]==A[y]:
-                    print(A[x],file=out)
-                    x=N
-                    break
-            x+=1
+        A.sort()
+        for x in range(N-1):
+            if A[x] == A[x+1]:
+                print(A[x], file=out)
+                break
